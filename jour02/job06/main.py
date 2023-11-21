@@ -1,5 +1,6 @@
-for ne in range(1001):
-
-    if all(ne % i != 0 
-        for i in range(2, int(ne**0.5) + 1)):
-            print(ne)
+for i in range(2,1001):
+    for k in range(2,i):
+        if i % k == 0:
+            break
+    else:
+        print(i)    
