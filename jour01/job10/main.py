@@ -1,21 +1,26 @@
 investissement = 30000
-rendement = 0.08
+taux = 0.08
 
 print (f"Investissement de {investissement}€")
-gain = investissement * rendement
+gain = investissement * taux
 print (f"Mon gain annuel {gain}")
 
 print (f"L'investisseur augmente son capital de 5000 euros, le taux augmenta de 2%")
-rendement = rendement + 0.02
-investissement = investissement + 5000
-gain = investissement * rendement
+investissement = investissement + gain + 5000
+taux = taux + taux * 0.02
+
+gain = investissement * taux
 print (f"Gain total annuel {gain}")
 
-print ("L'investisseur retire 10% du montant total, suite à ca, le rendement diminue de 1%")
-rendement = rendement - 0.01
-investissement = (investissement) * 0.9
-gain = investissement * rendement
-print (f"Suite au retrait de 10% le montant total passe à {'%.2f' % gain}")
+print (f"L'investisseur retire 10% du montant total, suite à ca, le rendement diminue de 1%")
+investissement = investissement * 0.9
+taux = taux - taux * 0.01
+
+gain = investissement * taux
+
+investissement = investissement + gain
+print (f"Le montant final de l'investissmement est {'%.2f' % investissement} et le le nouveau gain est { '%.2f' % gain}")
+
 
 
 
